@@ -7,7 +7,7 @@ import { EffectComposer, SSAO } from "@react-three/postprocessing"
 
 THREE.ColorManagement.legacyMode = false
 const baubleMaterial = new THREE.MeshStandardMaterial({ color: "black", metalness: 0.6, roughness: 0 })
-const baubleMaterialscroll = new THREE.MeshStandardMaterial({ color: "green", emissive: "", roughness: 20 })
+const baubleMaterialscroll = new THREE.MeshStandardMaterial({ color: "red", emissive: "", roughness: 20 })
 const capMaterial = new THREE.MeshStandardMaterial({ metalness: 0.6, roughness: 0.15, color: "#8a300f", emissive: "#600000", envMapIntensity: 20 })
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28)
 const baubles = [...Array(60)].map(() => ({ args: [0.8, 0.8, 1.2, 1, 1.25][Math.floor(Math.random() * 5)], mass: 1, angularDamping: 0.9, linearDamping: 0.99 }))
