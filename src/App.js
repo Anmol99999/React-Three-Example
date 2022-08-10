@@ -26,10 +26,10 @@ function Bauble({ vec = new THREE.Vector3(), ...props }) {
   useEffect(() => api.position.subscribe((p) => api.applyForce(vec.set(...p).normalize().multiplyScalar(-props.args * 35).toArray(), [0, 0, 0])), [api]) // prettier-ignore
   return (
     <group ref={ref} dispose={null}>
-      <mesh castShadow receiveShadow scale={0.016} geometry={nodes.mouse001.children[0].geometry} material={baubleMaterial} />
-      <mesh castShadow receiveShadow scale={0.016} geometry={nodes.mouse001.children[1].geometry} material={baubleMaterialscroll} />
-      <mesh castShadow receiveShadow scale={0.016} geometry={nodes.mouse001.children[2].geometry} material={baubleMaterialscroll} />
-      <mesh castShadow receiveShadow scale={0.016} geometry={nodes.mouse001.children[3].geometry} material={baubleMaterialscroll}></mesh>
+      <mesh castShadow receiveShadow scale={0.01} geometry={nodes.mouse001.children[0].geometry} material={baubleMaterial} />
+      <mesh castShadow receiveShadow scale={0.01} geometry={nodes.mouse001.children[1].geometry} material={baubleMaterialscroll} />
+      <mesh castShadow receiveShadow scale={0.01} geometry={nodes.mouse001.children[2].geometry} material={baubleMaterialscroll} />
+      <mesh castShadow receiveShadow scale={0.01} geometry={nodes.mouse001.children[3].geometry} material={baubleMaterialscroll}></mesh>
     </group>
   )
 }
